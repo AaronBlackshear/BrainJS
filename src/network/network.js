@@ -10,7 +10,6 @@ const options = {
 }
 
 const network = new brain.NeuralNetwork(options);
-// const network = new brain.NeuralNetwork();
 
 network.train(data);
 

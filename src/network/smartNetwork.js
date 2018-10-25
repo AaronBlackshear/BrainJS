@@ -13,8 +13,6 @@ const network = new brain.recurrent.LSTM(options);
 
 network.train(data);
 
-console.log(network.run('Hello'))
-
 const run = network.toFunction();
 
 export default run;

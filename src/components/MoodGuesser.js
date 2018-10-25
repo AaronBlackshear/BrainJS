@@ -16,7 +16,10 @@ export default class MoodGuesser extends Component {
     let smiles = localStorage.getItem('smiles')
     let frowns = localStorage.getItem('frowns')
     let mood = localStorage.getItem('mood')
-    this.setState({ smiles, frowns, mood: JSON.parse(mood) })
+    this.setState({
+      smiles: JSON.parse(smiles),
+      frowns: JSON.parse(frowns),
+      mood: JSON.parse(mood) })
   }
 
   setMood = (smiles, frowns) => {
