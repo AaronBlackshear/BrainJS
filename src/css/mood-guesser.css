@@ -1,0 +1,17 @@
+.emoji-btn:hover {
+  border-color: blue;
+}
+
+.img {
+  max-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .5;
+}
+
+#mood {
+  font-size: 3rem;
+}
