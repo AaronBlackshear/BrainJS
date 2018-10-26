@@ -30,8 +30,8 @@ export default class MoodGuesser extends Component {
 
   showEmotion = state => {
     this.setState(prevState => {
-      localStorage.setItem(state, (prevState[state] += 1))
-      return { [state]: (prevState[state] += 1) }
+      localStorage.setItem(state, (prevState[state] + 1))
+      return { [state]: (prevState[state] + 1) }
     })
   }
 

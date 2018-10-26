@@ -20,10 +20,12 @@ export default class Conversation extends Component {
     const { input, response } = this.state
 
     return (
-      <div>
-        <input value={input} onChange={this.handleUseInput} />
-        <button onClick={this.sendMessage}>Send</button>
-        {response}
+      <div className="gradient-bg">
+        <h1 className="ai-response">{response}</h1>
+        <div className="flex-center-center screen-center">
+          <input className="input" value={input} onChange={this.handleUseInput} />
+          <button className="tab" onClick={this.sendMessage}>Send</button>
+        </div>
       </div>
     )
   }

@@ -20,3 +20,44 @@ button {
   background-color: white;
   transition: .1s ease-in-out;
 }
+
+.input {
+  padding: 15px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid rgb(216, 216, 216);
+  font-size: 1rem;
+}
+
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ai-response {
+  font-size: 4rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to top left, #7b1725f0, #4537cd);
+}
