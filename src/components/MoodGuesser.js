@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import run from '../network/network'
+import axios from 'axios';
+// import run from '../network/network'
 import Happy from './Happy'
 import Sad from './Sad'
 import Reset from './Reset'
@@ -22,10 +23,13 @@ export default class MoodGuesser extends Component {
       mood: JSON.parse(mood) })
   }
 
-  setMood = (smiles, frowns) => {
-    const mood = run({ smiles, frowns })
-    this.setState({ mood })
-    localStorage.setItem('mood', JSON.stringify(mood))
+  setMood = async (smiles, frowns) => {
+    let mood;
+    await axios.post('/api/moodGuesser', { smiles, frowns })
+            .then(response => mood = response.data)
+            .catch(err => console.log(err));
+    await this.setState({ mood })
+    await localStorage.setItem('mood', JSON.stringify(mood))
   }
 
   showEmotion = state => {

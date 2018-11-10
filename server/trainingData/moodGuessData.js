@@ -13,4 +13,5 @@ const data = [
   { input: { smiles: 0, frowns: 0.3 }, output: { happy: 0.4, sad: 0.5  } },
 ];
 
-export default data;
+
+module.exports = data;
