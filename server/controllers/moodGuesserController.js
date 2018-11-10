@@ -18,7 +18,9 @@ network.train(trainingData);
 
 const moodGuesser = (req, res) => {
   const { smiles, frowns } = req.body;
-  res.status(200).json(network.run({ smiles, frowns }));
+  res
+    .status(200).json(network.run({ smiles, frowns }))
+    .catch(err => res.status(500).json(err))
 }
 
 module.exports = {
