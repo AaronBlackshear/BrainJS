@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import run from '../network/smartNetwork'
+import axios from 'axios';
+// import run from '../network/smartNetwork'
 
 export default class Conversation extends Component {
   state = {
@@ -11,9 +12,13 @@ export default class Conversation extends Component {
     this.setState({ input: input.target.value })
   }
 
-  sendMessage = () => {
+  sendMessage = async () => {
     const { input } = this.state
-    this.setState({ response: run(input) })
+    let data;
+    await axios.post('/api/conversationStarter', { input })
+                .then(response => data = response.data)
+                .catch(err => console.log(err));
+    this.setState({ response: data })
   }
 
   render () {

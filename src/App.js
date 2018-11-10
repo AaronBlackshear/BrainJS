@@ -36,8 +36,8 @@ class App extends Component {
           />
         </div>
         <section>
-          {/* {view === 'MoodGuesser' ? <MoodGuesser /> : <Conversation />} */}
-          <MoodGuesser />
+          {view === 'MoodGuesser' ? <MoodGuesser /> : <Conversation />}
+          {/* <MoodGuesser /> */}
         </section>
       </div>
     )

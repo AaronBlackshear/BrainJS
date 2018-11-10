@@ -11,4 +11,4 @@ const conversationData = [
   { input: 'See ya', output: 'Goodbye!' }
 ]
 
-export default conversationData
+module.exports = conversationData;
